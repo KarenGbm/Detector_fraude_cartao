@@ -1,0 +1,170 @@
+
+
+## 📌 Sobre o projeto
+
+Este projeto tem como objetivo detectar fraudes em transações de cartão de crédito utilizando técnicas de Machine Learning com o algoritmo **Gaussian Naive Bayes**.
+
+O dataset utilizado foi obtido no Kaggle e contém dados financeiros previamente padronizados, permitindo foco maior na etapa de modelagem e avaliação do modelo.
+
+O projeto foi desenvolvido com foco em aprendizado de:
+
+* classificação supervisionada;
+* análise de métricas;
+* detecção de fraude;
+* avaliação de modelos de Machine Learning;
+* interpretação de matrizes de confusão e métricas de desempenho.
+
+---
+
+#  Dataset
+
+O conjunto de dados possui:
+
+* **568.630 registros**
+* **31 colunas**
+
+Das 31 colunas disponíveis:
+
+* a primeira coluna (`id`) foi descartada por não possuir relevância para o treinamento;
+* foram utilizadas **30 variáveis preditoras**;
+* a última coluna (`Class`) representa a variável alvo:
+
+  * `0` → transação normal
+  * `1` → fraude
+
+Os dados já estavam previamente padronizados no dataset original, o que eliminou a necessidade de:
+
+* tratamento de dados textuais;
+* encoding de variáveis categóricas;
+* normalização manual.
+
+Além disso, o dataset utilizado encontra-se balanceado entre as classes de fraude e não fraude.
+
+---
+
+# Modelo Escolhido
+
+O algoritmo escolhido foi o **Gaussian Naive Bayes**.
+
+A escolha foi feita por se tratar de um modelo:
+
+* simples;
+* rápido;
+* eficiente para primeiros projetos;
+* fácil de interpretar;
+* muito utilizado como baseline em Machine Learning.
+
+Apesar da simplicidade do algoritmo, o modelo apresentou resultados bastante satisfatórios para um primeiro projeto de detecção de fraude.
+
+---
+
+# Bibliotecas Utilizadas
+
+```python
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+
+from sklearn.metrics import (
+    confusion_matrix,
+    accuracy_score,
+    classification_report,
+    roc_auc_score,
+    precision_recall_curve
+)
+```
+
+---
+
+# 📈 Resultados Obtidos
+
+## 🎯 Accuracy
+
+* **0.92**
+
+O modelo apresentou aproximadamente 92% de acurácia tanto em treino quanto em teste, indicando boa capacidade de generalização e baixo indício de overfitting.
+
+---
+
+# 📊 ROC-AUC
+
+* **0.917**
+
+O ROC-AUC acima de 0.90 indica excelente capacidade do modelo em separar transações fraudulentas de transações legítimas.
+
+---
+
+# 📋 Classification Report
+
+| Classe         | Precision | Recall | F1-Score |
+| -------------- | --------: | -----: | -------: |
+| Não Fraude (0) |      0.87 |   0.98 |     0.92 |
+| Fraude (1)     |      0.98 |   0.86 |     0.91 |
+
+---
+
+# 📉 Matriz de Confusão
+
+|                 | Previsto Não Fraude | Previsto Fraude |
+| --------------- | ------------------: | --------------: |
+| Real Não Fraude |               55486 |            1238 |
+| Real Fraude     |                8160 |           48842 |
+
+---
+
+#  Interpretação dos Resultados
+
+O modelo apresentou:
+
+excelente precisão na detecção de fraudes;
+
+baixo número de falsos positivos;
+
+boa capacidade de generalização;
+
+excelente equilíbrio entre Precision e Recall;
+
+forte capacidade de separação entre classes.
+
+Mesmo utilizando um modelo relativamente simples, os resultados obtidos foram bastante sólidos para um primeiro projeto de Machine Learning aplicado à detecção de fraude.
+
+---
+
+# Objetivos do Projeto
+
+Este projeto foi desenvolvido com fins educacionais e de aprendizado prático em Data Science e Machine Learning.
+
+O foco principal foi compreender:
+
+* funcionamento de modelos de classificação;
+* análise de métricas;
+* comportamento de datasets balanceados;
+* avaliação de desempenho em sistemas de detecção de fraude.
+
+---
+
+# ▶️ Como executar o projeto
+
+## 📥 Dataset
+
+Link do dataset no Kaggle:
+
+https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023
+
+---
+
+1. Clone este repositório;
+
+2. Crie uma pasta chamada `data`;
+
+3. Baixe o dataset no Kaggle;
+
+4. Coloque o arquivo `creditcard_2023.csv` dentro da pasta `data`;
+
+5. Execute o script normalmente e substitua o caminho do arquivo.
+
+---
