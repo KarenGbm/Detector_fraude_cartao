@@ -1,6 +1,5 @@
 
-
-## 📌 Sobre o projeto
+##  Sobre o projeto
 
 Este projeto tem como objetivo detectar fraudes em transações de cartão de crédito utilizando técnicas de Machine Learning com o algoritmo **Gaussian Naive Bayes**.
 
@@ -16,7 +15,7 @@ O projeto foi desenvolvido com foco em aprendizado de:
 
 ---
 
-#  Dataset
+# Dataset
 
 O conjunto de dados possui:
 
@@ -42,7 +41,7 @@ Além disso, o dataset utilizado encontra-se balanceado entre as classes de frau
 
 ---
 
-# Modelo Escolhido
+#  Modelo Escolhido
 
 O algoritmo escolhido foi o **Gaussian Naive Bayes**.
 
@@ -80,9 +79,9 @@ from sklearn.metrics import (
 
 ---
 
-# 📈 Resultados Obtidos
+# Resultados Obtidos
 
-## 🎯 Accuracy
+##  Accuracy
 
 * **0.92**
 
@@ -90,7 +89,7 @@ O modelo apresentou aproximadamente 92% de acurácia tanto em treino quanto em t
 
 ---
 
-# 📊 ROC-AUC
+# ROC-AUC
 
 * **0.917**
 
@@ -98,7 +97,7 @@ O ROC-AUC acima de 0.90 indica excelente capacidade do modelo em separar transa�
 
 ---
 
-# 📋 Classification Report
+#  Classification Report
 
 | Classe         | Precision | Recall | F1-Score |
 | -------------- | --------: | -----: | -------: |
@@ -107,7 +106,7 @@ O ROC-AUC acima de 0.90 indica excelente capacidade do modelo em separar transa�
 
 ---
 
-# 📉 Matriz de Confusão
+# Matriz de Confusão
 
 |                 | Previsto Não Fraude | Previsto Fraude |
 | --------------- | ------------------: | --------------: |
@@ -120,21 +119,21 @@ O ROC-AUC acima de 0.90 indica excelente capacidade do modelo em separar transa�
 
 O modelo apresentou:
 
-excelente precisão na detecção de fraudes;
+✅ excelente precisão na detecção de fraudes;
 
-baixo número de falsos positivos;
+✅ baixo número de falsos positivos;
 
-boa capacidade de generalização;
+✅ boa capacidade de generalização;
 
-excelente equilíbrio entre Precision e Recall;
+✅ excelente equilíbrio entre Precision e Recall;
 
-forte capacidade de separação entre classes.
+✅ forte capacidade de separação entre classes.
 
 Mesmo utilizando um modelo relativamente simples, os resultados obtidos foram bastante sólidos para um primeiro projeto de Machine Learning aplicado à detecção de fraude.
 
 ---
 
-# Objetivos do Projeto
+#  Objetivos do Projeto
 
 Este projeto foi desenvolvido com fins educacionais e de aprendizado prático em Data Science e Machine Learning.
 
@@ -151,11 +150,16 @@ O foco principal foi compreender:
 
 ## 📥 Dataset
 
-Link do dataset no Kaggle:
+Por se tratar de um dataset grande, abaixo está o link do dataset no Kaggle:
 
 https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023
 
 ---
+
+
+---
+
+## Passos para execução
 
 1. Clone este repositório;
 
@@ -165,6 +169,6 @@ https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dat
 
 4. Coloque o arquivo `creditcard_2023.csv` dentro da pasta `data`;
 
-5. Execute o script normalmente e substitua o caminho do arquivo.
+5. execute o código após modificar o caminho do arquivo
 
 ---
